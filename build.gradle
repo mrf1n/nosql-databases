@@ -8,6 +8,12 @@ group = 'com.github.mrf1n.database'
 version = '0.1'
 java.sourceCompatibility = JavaVersion.VERSION_17
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
 repositories {
     mavenCentral()
 }
@@ -21,6 +27,7 @@ dependencies {
 
     // Lombok
     compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 
     // Test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
